@@ -24,7 +24,6 @@ export default {
   width: 100%;
   height: 100vh;
   position: fixed;
-  left: 15%;
   z-index: -1;
 }
 
@@ -49,11 +48,7 @@ export default {
   animation-delay: 1.5s;
 }
 
-.smoke3 {
-  width: 500px;
-  animation: smoke3 4s linear infinite;
-  animation-delay: 2.5s;
-}
+
 
 @keyframes smoke1 {
   0% {
@@ -119,37 +114,7 @@ export default {
   }
 }
 
-@keyframes smoke3 {
-  0% {
-    filter: blur(0px);
-    transform: translateY(0px) scale(1);
-    opacity: 0;
-  }
 
-  25% {
-    filter: blur(3px);
-    transform: translateY(-20px) scale(1.05);
-    opacity: 0.5;
-  }
-
-  50% {
-    filter: blur(5px);
-    transform: translateY(-40px) scale(1.1);
-    opacity: 1;
-  }
-
-  75% {
-    filter: blur(5px);
-    transform: translateY(-60px) scale(1.15);
-    opacity: 0.5;
-  }
-
-  100% {
-    filter: blur(7px);
-    transform: translateY(-80px) scale(1.2);
-    opacity: 0;
-  }
-}
 
 
 
