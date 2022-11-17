@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'AppSmoke'
+  name: 'AppSmokeLoading'
 }
 </script>
 
@@ -21,14 +21,11 @@ export default {
 <style lang="scss" scoped>
 
 .smoke-wrap {
-
-  left: -68%;
   width: 100%;
   height: 100vh;
   position: fixed;
+  left: 15%;
   z-index: -1;
-  overflow: hidden;
-
 }
 
 .smoke,

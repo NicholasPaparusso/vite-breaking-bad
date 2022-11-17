@@ -1,6 +1,9 @@
 <script>
+
 export default {
-name: 'AppHeader'
+name: 'AppHeader',
+
+props:{ title : String,}
 }
 </script>
 
@@ -9,7 +12,7 @@ name: 'AppHeader'
     <div class="logo-np">
       <img src="bb-logo.png" alt="logo">
     </div>
-    <h1>breaking bad api</h1>
+    <h1>{{title}}</h1>
   </div>
 </template>
 
