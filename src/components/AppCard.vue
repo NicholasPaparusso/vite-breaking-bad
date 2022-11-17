@@ -11,3 +11,12 @@ name: 'AppCard'
 <style lang="scss" scoped>
 
 </style>
+
+
+<!--
+  immagine = store.img
+   NOME = store.name
+   Serie =  store.category
+   Status = store.status
+   char_id
+-->

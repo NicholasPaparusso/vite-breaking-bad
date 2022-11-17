@@ -1,10 +1,12 @@
 @use './partials/vars' as * ;
 
 @import 'node_modules/bootstrap/scss/bootstrap.scss';
-@import 'nome_modules/@fontsource/montserrat/400.css';
-@import 'nome_modules/@fontsource/montserrat/500.css';
-@import 'nome_modules/@fontsource/montserrat/600.css';
-@import 'nome_modules/@fontsource/montserrat/700.css';
+
+@import 'nome:modules/@fontsource/montserrat/400.css';
+@import 'nome:modules/@fontsource/montserrat/500.css';
+@import 'nome:modules/@fontsource/montserrat/600.css';
+@import 'nome:modules/@fontsource/montserrat/700.css';
+
 
 
 body{
@@ -12,4 +14,8 @@ body{
   min-height: 100vh;
   background-color: black
   ;
+}
+
+img{
+  width: 100%;
 }
