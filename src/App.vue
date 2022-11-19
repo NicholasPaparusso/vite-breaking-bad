@@ -1,13 +1,12 @@
 <script>
 
 import axios from 'axios';
-import { getChar } from './data/function';
 import { store } from './data/store';
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 import AppCard from './components/AppCard.vue';
 import AppSmoke from './components/AppSmoke.vue';
-
+import AppSearch from './components/AppSearch.vue';
 
 export default {
   name: 'App',
@@ -15,7 +14,6 @@ export default {
   data(){
   return{
     store,
-    getChar
   }
 },
 
@@ -24,13 +22,34 @@ export default {
     AppMain,
     AppCard,
     AppSmoke,
+    AppSearch,
   },
 
   methods:{
+
+    getChar(){
+      store.isLoaded = false;
+      axios.get(store.apiUrl,{
+        params:{
+          name: store.charToSearch,
+          category: store.charCategory,
+        }
+      })
+      .then(result => {
+        store.charData = result.data ;
+        store.isLoaded = true;
+      })
+    },
+
+    reset(){
+      store.charToSearch = '';
+      store.charCategory = '';
+      this.getChar();
+    }
   },
 
   mounted(){
-    this.getChar(store, axios)
+   
   }
 
 }
@@ -44,13 +63,9 @@ export default {
   <AppSmoke/>
 
   <AppHeader title="breaking bad api"/>
-
-  <div class="container px-5 py-2">
-    <div class="np-btn" @click="store.isLoaded = !store.isLoaded">
-      <h5>Carica Personaggi</h5> 
-    </div>
-  </div>
   
+  <AppSearch @startSearch="getChar()" @reset="reset()"/>
+
   <AppMain/>
 
 </template>

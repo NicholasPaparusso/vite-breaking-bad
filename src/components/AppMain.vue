@@ -25,7 +25,7 @@ components:{
    
       <AppCard
       v-for="char in store.charData"
-      v-show="char.category === 'Breaking Bad' && char.name != 'Holly White' && char.name != 'Skinny Pete' && char.name !='Lydia Rodarte-Quayle'"
+      v-show="char.name != 'Holly White' && char.name != 'Skinny Pete' && char.name !='Lydia Rodarte-Quayle'"
       
       :key="char.char_id"
       :card="char"

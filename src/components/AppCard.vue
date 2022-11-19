@@ -37,7 +37,11 @@ props:{
       height: 270px;
       border: 1px solid lighten($main-color, 30%);
       object-fit: cover;
-
+      transition: all .2s linear;
+      cursor: pointer;
+      &:hover{
+        transform: scale(1.05);
+      }
     }
   }
 
